@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Vy 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to top left, #ffe4ec, #e0f7fa);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #ff69b4;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff69b4;
+      font-size: 2em;
+      animation: float 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi Vy 💖</h1>
+  <p>Just wanted to say thank you for everything you’ve done for me.</p>
+  <p>You’re the best big I could’ve asked for. 💕</p>
+  <p>I appreciate you more than words can say!</p>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+      heart.textContent = '💖';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
