@@ -11,7 +11,7 @@
       text-align: center;
       padding: 50px;
       color: #ff69b4;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -51,6 +51,41 @@
         transform: translateY(-10vh) scale(1.5);
       }
     }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 10px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 250px;
+      transform: rotate(-3deg);
+    }
+
+    .polaroid:nth-child(even) {
+      transform: rotate(3deg);
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: auto;
+      border-bottom: 10px solid white;
+    }
+
+    .caption {
+      font-size: 1.2em;
+      color: #555;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -63,6 +98,21 @@
   <p>I've had a lot of fun from side quests to raves to singing to studying.</p>
   <p>Can't wait for more memories!</p>
   <p<>THANK YOU!</p>
+
+  <div class="gallery">
+    <div class="polaroid">
+      <img src="DSC02871.jpeg" alt="Snowy Night at UT">
+      <div class="caption">A magical night at UT ❄️✨</div>
+    </div>
+    <div class="polaroid">
+      <img src="DSC03213.jpeg" alt="Vy being adorable">
+      <div class="caption">The most amazing big ever! 💕</div>
+    </div>
+    <div class="polaroid">
+      <img src="DSC08817.jpeg" alt="Friends at UT">
+      <div class="caption">Cherishing these memories forever 💖</div>
+    </div>
+  </div>
 
   <div class="hearts" id="hearts"></div>
 
