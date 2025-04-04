@@ -53,45 +53,85 @@
   </div>
 
   <div id="mainContent" class="hidden flex flex-col items-center">
-    <div class="flex w-full justify-between items-start max-w-4xl">
-      <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64">
-        <img src="DSC02871.jpeg" class="w-full h-auto rounded-md" />
-        <p class="text-gray-600 mt-2 text-center">snowy tyshi ❄️✨</p>
-      </div>
-      
-      <div class="text-center max-w-lg">
-        <h1 class="text-4xl font-bold mb-4">Hey Vy! 💖</h1>
-        <p class="text-lg mb-2">Congrats on Kappas!</p>
-        <p class="text-lg mb-2">Just wanted to say thanks for picking me up this year!</p>
-        <p class="text-lg mb-2">I couldn't have asked for any other introduction to college.</p>
-        <p class="text-lg mb-2">I appreciate all you've done for us adings,</p>
-        <p class="text-lg mb-2">and I appreciate you for being able to relate to so many of my interests/hobbies.</p>
-        <p class="text-lg mb-2">I've had a lot of fun from side quests to raves to singing to studying.</p>
-        <p class="text-lg mb-2">Can't wait for more memories!</p>
-        <p class="text-lg font-bold">THANK YOU!</p>
-      </div>
-      
-      <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64">
-        <img src="DSC03213.jpeg" class="w-full h-auto rounded-md" />
-        <p class="text-gray-600 mt-2 text-center">poke 🐙</p>
-      </div>
+  <div class="flex w-full justify-between items-start max-w-4xl">
+    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64">
+      <img src="DSC02871.jpeg" class="w-full h-auto rounded-md" />
+      <p class="text-gray-600 mt-2 text-center">snowy tyshi ❄️✨</p>
     </div>
-
-    <div class="mt-6">
-      <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64">
-        <img src="DSC08817.jpeg" class="w-full h-auto rounded-md" />
-        <p class="text-gray-600 mt-2 text-center">dallas sidequest + rave 🪩</p>
-      </div>
+    
+    <div class="text-center max-w-lg">
+      <h1 class="text-4xl font-bold mb-4">Hey Vy! 💖</h1>
+      <p class="text-lg mb-2">Congrats on Kappas!</p>
+      <p class="text-lg mb-2">Just wanted to say thanks for picking me up this year!</p>
+      <p class="text-lg mb-2">I couldn't have asked for any other introduction to college.</p>
+      <p class="text-lg mb-2">I appreciate all you've done for us adings,</p>
+      <p class="text-lg mb-2">and I appreciate you for being able to relate to so many of my interests/hobbies.</p>
+      <p class="text-lg mb-2">I've had a lot of fun from side quests to raves to singing to studying.</p>
+      <p class="text-lg mb-2">Can't wait for more memories!</p>
+      <p class="text-lg font-bold">THANK YOU!</p>
+    </div>
+    
+    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64">
+      <img src="DSC03213.jpeg" class="w-full h-auto rounded-md" />
+      <p class="text-gray-600 mt-2 text-center">poke 🐙</p>
     </div>
   </div>
 
+  <div class="mt-6 flex flex-col items-center">
+    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64">
+      <img src="DSC08817.jpeg" class="w-full h-auto rounded-md" />
+      <p class="text-gray-600 mt-2 text-center">dallas sidequest + rave 🪩</p>
+    </div>
+
+    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64 mt-4">
+      <img src="IMG_6825.jpeg" class="w-full h-auto rounded-md" />
+      <p class="text-gray-600 mt-2 text-center">full fam 🏡❤️</p>
+    </div>
+
+    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64 mt-4">
+      <img src="IMG_5404.jpeg" class="w-full h-auto rounded-md" />
+      <p class="text-gray-600 mt-2 text-center">pvz tweak? 🧟‍♂️✨</p>
+    </div>
+
+    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64 mt-4">
+      <img src="DSCF7834.jpeg" class="w-full h-auto rounded-md" />
+      <p class="text-gray-600 mt-2 text-center">pvz 🎧🌙</p>
+    </div>
+  </div>
+</div>
+
   <script>
-    document.getElementById("openLetter").addEventListener("click", function() {
-      this.classList.add("hidden");
-      const mainContent = document.getElementById("mainContent");
-      mainContent.classList.remove("hidden");
-      mainContent.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-  </script>
+  // Show the main content when the button is clicked
+  document.getElementById("openLetter").addEventListener("click", function() {
+    this.classList.add("hidden");
+    const mainContent = document.getElementById("mainContent");
+    mainContent.classList.remove("hidden");
+    mainContent.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    startFloatingHearts(); // Start floating hearts when letter is opened
+  });
+
+  function startFloatingHearts() {
+    const heartsContainer = document.querySelector(".hearts");
+    const heartEmoji = ["💖", "💘", "💕", "💓", "💞", "💗"];
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.animationDuration = `${4 + Math.random() * 3}s`; // random speed
+      heart.textContent = heartEmoji[Math.floor(Math.random() * heartEmoji.length)];
+
+      heartsContainer.appendChild(heart);
+
+      // Remove heart after animation
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }, 300); // Create a heart every 300ms
+  }
+</script>
 </body>
 </html>
+
+
