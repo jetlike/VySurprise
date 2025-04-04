@@ -53,13 +53,21 @@
   </div>
 
   <div id="mainContent" class="hidden flex flex-col items-center">
-  <div class="flex w-full justify-between items-start max-w-4xl">
-    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64">
-      <img src="DSC02871.jpeg" class="w-full h-auto rounded-md" />
+  <div class="relative w-full max-w-4xl flex flex-wrap justify-center gap-4">
+    <!-- Top Left -->
+    <div class="absolute top-0 left-0 transform -rotate-6 w-40">
+      <img src="DSC02871.jpeg" class="w-full h-auto rounded-md shadow-lg" />
       <p class="text-gray-600 mt-2 text-center">snowy tyshi ❄️✨</p>
     </div>
-    
-    <div class="text-center max-w-lg">
+
+    <!-- Top Right -->
+    <div class="absolute top-0 right-0 transform rotate-6 w-40">
+      <img src="DSC03213.jpeg" class="w-full h-auto rounded-md shadow-lg" />
+      <p class="text-gray-600 mt-2 text-center">poke 🐙</p>
+    </div>
+
+    <!-- Centered Text Block -->
+    <div class="text-center max-w-lg p-6 bg-white rounded-lg shadow-xl relative z-10">
       <h1 class="text-4xl font-bold mb-4">Hey Vy! 💖</h1>
       <p class="text-lg mb-2">Congrats on Kappas!</p>
       <p class="text-lg mb-2">Just wanted to say thanks for picking me up this year!</p>
@@ -70,35 +78,32 @@
       <p class="text-lg mb-2">Can't wait for more memories!</p>
       <p class="text-lg font-bold">THANK YOU!</p>
     </div>
-    
-    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64">
-      <img src="DSC03213.jpeg" class="w-full h-auto rounded-md" />
-      <p class="text-gray-600 mt-2 text-center">poke 🐙</p>
-    </div>
-  </div>
 
-  <div class="mt-6 flex flex-col items-center">
-    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64">
-      <img src="DSC08817.jpeg" class="w-full h-auto rounded-md" />
-      <p class="text-gray-600 mt-2 text-center">dallas sidequest + rave 🪩</p>
-    </div>
-
-    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64 mt-4">
-      <img src="IMG_6825.jpeg" class="w-full h-auto rounded-md" />
+    <!-- Bottom Left -->
+    <div class="absolute bottom-0 left-0 transform rotate-3 w-40">
+      <img src="IMG_6825.jpeg" class="w-full h-auto rounded-md shadow-lg" />
       <p class="text-gray-600 mt-2 text-center">full fam 🏡❤️</p>
     </div>
 
-    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[-3deg] w-64 mt-4">
-      <img src="IMG_5404.jpeg" class="w-full h-auto rounded-md" />
+    <!-- Bottom Right -->
+    <div class="absolute bottom-0 right-0 transform -rotate-3 w-40">
+      <img src="IMG_5404.jpeg" class="w-full h-auto rounded-md shadow-lg" />
       <p class="text-gray-600 mt-2 text-center">pvz tweak? 🧟‍♂️✨</p>
     </div>
 
-    <div class="bg-white p-4 shadow-lg rounded-md transform rotate-[3deg] w-64 mt-4">
-      <img src="DSCF7834.jpeg" class="w-full h-auto rounded-md" />
+    <!-- Extra Floating Images -->
+    <div class="absolute left-10 bottom-1/2 transform -rotate-6 w-40">
+      <img src="DSCF7834.jpeg" class="w-full h-auto rounded-md shadow-lg" />
       <p class="text-gray-600 mt-2 text-center">pvz 🎧🌙</p>
+    </div>
+
+    <div class="absolute right-10 bottom-1/2 transform rotate-6 w-40">
+      <img src="DSC08817.jpeg" class="w-full h-auto rounded-md shadow-lg" />
+      <p class="text-gray-600 mt-2 text-center">dallas sidequest + rave 🪩</p>
     </div>
   </div>
 </div>
+
 
   <script>
   // Show the main content when the button is clicked
